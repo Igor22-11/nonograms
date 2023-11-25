@@ -1,0 +1,115 @@
+@import "normalize";
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #403f3d;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #e1d4c9;
+}
+
+.container {
+  // background: red;
+  width: 1440px;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px 40px 40px 40px;
+}
+
+// header
+
+.header {
+  // background: green;
+  width: 100%;
+  height: 60px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  a {
+    img {
+      width: 100px;
+      height: 60px;
+      margin-top: 3px;
+    }
+  }
+  nav {
+    width: 456px;
+    position: relative;
+
+    .menu__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .menu__item {
+        position: relative;
+        bottom: 2px;
+        &::after {
+          position: absolute;
+          content: "";
+          left: 0;
+          bottom: -6px;
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #403f3d;
+          transition: 0.3s;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .menu__cup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    bottom: 2px;
+    img {
+      position: relative;
+      bottom: 2px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: -6px;
+      display: block;
+      width: 0;
+      height: 2px;
+      background: #403f3d;
+      transition: 0.3s;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:hover:after {
+      width: 100%;
+    }
+  }
+}
+
+
+// enjoy
+
+.enjoy {
+  border: 1px solid black;
+  height: 644px;
+  margin-top: 20px;
+  padding: 100px;
+  border-radius: 40px;
+}
