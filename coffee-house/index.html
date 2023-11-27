@@ -1,38 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee-House</title>
-    <link rel="icon" href="assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet">
   </head>
   <body>
     <div class="container">
+      <!-- header -->
+
       <header class="header">
-        <a href="#"><img src="assets/img/logo.svg" alt=""></a>
+        <a href="#"><img src="assets/img/logo.svg" alt="logo"></a>
         <nav class="nav">
           <ul class="menu__nav">
-            <li class="menu__item"><a href="#" class="menu__link">Favorite coffee</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Favorite coffee</a>
+            </li>
             <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Mobile app</a></li>
-            <li class="menu__item"><a href="#" class="menu__link">Contact us</a></li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Mobile app</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Contact us</a>
+            </li>
           </ul>
         </nav>
+
         <div class="menu__cup">
           <a href="#" class="menu__link">Menu</a>
           <img src="assets/img/coffee-cup.svg" alt="cup">
         </div>
       </header>
 
-      <section class="section enjoy">
-        
+      <!-- enjoy -->
+
+      <section class="section__enjoy">
+        <video autoplay muted loop class="video-background">
+          <source src="assets/video/video(720p).mp4" type="video/mp4">
+        </video>
+
+        <div class="enjoy__wrapper">
+          <h1 class="enjoy__title">
+            <span class="mark__word">Enjoy</span> premium coffee at our charming
+            cafe
+          </h1>
+          <p class="enjoy__description">
+            With its inviting atmosphere and delicious coffee options, the
+            Coffee House Resource is a popular destination for coffee lovers and
+            those seeking a warm and inviting space to enjoy their favorite
+            beverage.
+          </p>
+          
+          <div class="enjoy__button">
+            <a href="#">Menu</a>
+            <img src="assets/img/coffee-cup.svg" alt="cup">
+          </div>
+        </div>
       </section>
+
+      <!-- favorite -->
+
+      <section class="section__favorite">
+        <h2 class="favorite__title">
+          Choose your <span class="mark__word">favorite</span> coffee
+        </h2>
+        <div class="favorite__slider">
+          <div class="favorite__button-prev">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.5"
+                y="0.5"
+                width="59"
+                height="59"
+                rx="29.5"
+                stroke="#665F55"/>
+              <path
+                d="M36.5 30H24M24 30L30 24M24 30L30 36"
+                stroke="#403F3D"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+            </svg>
+          </div>
+
+          <div class="favorite__slider-inner">
+            <div class="favorite__slider-img">
+              <img src="assets/img/main/coffee-slider-1.png" alt="coffee">
+            </div>
+            <div class="favorite__text-container">
+              <div class="favorite__text-title">S’mores Frappuccino</div>
+              <div class="favorite__text-description">
+                This new drink takes an espresso and mixes it with brown sugar
+                and cinnamon before being topped with oat milk.
+              </div>
+              <div class="favorite__text-price">$5.50</div>
+            </div>
+          </div>
+
+          <div class="favorite__button-next">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect
+                x="0.5"
+                y="0.5"
+                width="59"
+                height="59"
+                rx="29.5"
+                stroke="#665F55"/>
+              <path
+                d="M24 30H36.5M36.5 30L30.5 24M36.5 30L30.5 36"
+                stroke="#403F3D"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="favorite__slider-indicators">
+          <div class="slider__dot-indicator indicator-active"></div>
+          <div class="slider__dot-indicator"></div>
+          <div class="slider__dot-indicator"></div>
+        </div>
+      </section>
+
+      <!-- about -->
+
+      <section class="section__about">
+        <h2 class="about__description">
+          Resource is <span class="mark__word">the perfect and cozy place</span> where you can
+          enjoy a variety of hot beverages, relax, catch up with friends, or get
+          some work done.
+        </h2>
+
+        <div class="about__pictures">
+          <div class="about__pictures-column">
+            <div class="about-picture about-picture-big"><img src="assets/img/main/about/about-1.jpg" alt="picture"></div>
+          <div class="about-picture about-picture-small"><img src="assets/img/main/about/about-2.jpg" alt="picture"></div>
+          </div>
+
+          <div class="about__pictures-column">
+            <div class="about-picture about-picture-small"><img src="assets/img/main/about/about-3.jpg" alt="picture"></div>
+          <div class="about-picture about-picture-big"><img src="assets/img/main/about/about-4.jpg" alt="picture"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- *** -->
+
+
     </div>
   </body>
 </html>
