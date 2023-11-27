@@ -91,6 +91,7 @@ h6 {
   color: #403f3d;
   text-decoration: none;
   list-style-type: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -575,6 +576,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  cursor: pointer;
 }
 .section__about .about-picture img {
   -webkit-transition: 0.5s all;
@@ -695,20 +697,20 @@ body {
   padding: 12px 20px;
 }
 .section__mobile-app .mobile__apps .button__mobile-app.hovered path, .section__mobile-app .mobile__apps .button__mobile-app:hover path {
-  fill: #E1D4C9;
-  stroke: #665F55;
+  fill: #e1d4c9;
+  stroke: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app.hovered, .section__mobile-app .mobile__apps .button__mobile-app:hover {
-  background-color: #665F55;
+  background-color: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app.hovered .button__mobile-title, .section__mobile-app .mobile__apps .button__mobile-app:hover .button__mobile-title,
 .section__mobile-app .mobile__apps .button__mobile-app.hovered .button__mobile-platform,
 .section__mobile-app .mobile__apps .button__mobile-app:hover .button__mobile-platform {
-  color: #E1D4C9;
+  color: #e1d4c9;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -726,20 +728,20 @@ body {
           align-items: center;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.hovered path, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.button__mobile-app:hover path {
-  fill: #E1D4C9;
-  stroke: #665F55;
+  fill: #e1d4c9;
+  stroke: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.hovered, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.button__mobile-app:hover {
-  background-color: #665F55;
+  background-color: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.hovered .button__mobile-title, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.button__mobile-app:hover .button__mobile-title,
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.hovered .button__mobile-platform,
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-logo.button__mobile-app:hover .button__mobile-platform {
-  color: #E1D4C9;
+  color: #e1d4c9;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -766,20 +768,20 @@ body {
           align-items: start;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.hovered path, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.button__mobile-app:hover path {
-  fill: #E1D4C9;
-  stroke: #665F55;
+  fill: #e1d4c9;
+  stroke: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.hovered, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.button__mobile-app:hover {
-  background-color: #665F55;
+  background-color: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.hovered .button__mobile-title, .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.button__mobile-app:hover .button__mobile-title,
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.hovered .button__mobile-platform,
 .section__mobile-app .mobile__apps .button__mobile-app .button__mobile-description.button__mobile-app:hover .button__mobile-platform {
-  color: #E1D4C9;
+  color: #e1d4c9;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
@@ -803,20 +805,150 @@ body {
   cursor: pointer;
 }
 .section__mobile-app .mobile__apps .button__mobile-app:hover.hovered path, .section__mobile-app .mobile__apps .button__mobile-app:hover path {
-  fill: #E1D4C9;
-  stroke: #665F55;
+  fill: #e1d4c9;
+  stroke: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app:hover.hovered, .section__mobile-app .mobile__apps .button__mobile-app:hover {
-  background-color: #665F55;
+  background-color: #665f55;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 .section__mobile-app .mobile__apps .button__mobile-app:hover.hovered .button__mobile-title, .section__mobile-app .mobile__apps .button__mobile-app:hover .button__mobile-title,
 .section__mobile-app .mobile__apps .button__mobile-app:hover.hovered .button__mobile-platform,
 .section__mobile-app .mobile__apps .button__mobile-app:hover .button__mobile-platform {
-  color: #E1D4C9;
+  color: #e1d4c9;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+}
+
+.footer {
+  margin-top: 100px;
+  width: 100%;
+  min-height: 450px;
+  padding: 100px;
+  border-radius: 40px;
+  background: #665f55;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer .footer__description {
+  width: 530px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer .footer__description .footer__text {
+  color: #e1d4c9;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+.footer .footer__description .footer__text .mark__word {
+  color: #b0907a;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+  position: relative;
+  right: 3px;
+}
+.footer .footer__description .footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+}
+.footer .footer__description .footer__social .footer__social-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid #c1b6ad;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.footer .footer__description .footer__social .footer__social-button:hover path {
+  stroke: #665f55;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.footer .footer__description .footer__social .footer__social-button:hover {
+  background-color: #e1d4c9;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.footer .footer__contacts {
+  width: 530px;
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer .footer__contacts .contact__title {
+  color: #e1d4c9;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+.footer .footer__contacts .footer__contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  height: 116px;
+}
+.footer .footer__contacts .footer__contacts-wrapper a,
+.footer .footer__contacts .footer__contacts-wrapper .time-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+}
+.footer .footer__contacts .footer__contacts-wrapper .footer__contacts-map,
+.footer .footer__contacts .footer__contacts-wrapper .footer__contacts-time,
+.footer .footer__contacts .footer__contacts-wrapper .footer__contacts-phone {
+  color: #e1d4c9;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
 }
