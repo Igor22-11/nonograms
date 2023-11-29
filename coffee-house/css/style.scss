@@ -101,9 +101,6 @@ body {
     }
     &:hover:after {
       width: 100%;
-      img {
-        cursor: default;
-      }
     }
 
     .menu__link-active::after {
@@ -125,6 +122,9 @@ body {
   .menu__cup-active {
     cursor: default;
     .menu__link-active{
+      cursor: default;
+    }
+    img{
       cursor: default;
     }
   }

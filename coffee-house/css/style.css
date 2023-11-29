@@ -206,9 +206,6 @@ body {
 .header .menu__cup:hover:after {
   width: 100%;
 }
-.header .menu__cup:hover:after img {
-  cursor: default;
-}
 .header .menu__cup .menu__link-active::after {
   position: absolute;
   content: "";
@@ -231,6 +228,9 @@ body {
   cursor: default;
 }
 .header .menu__cup-active .menu__link-active {
+  cursor: default;
+}
+.header .menu__cup-active img {
   cursor: default;
 }
 
