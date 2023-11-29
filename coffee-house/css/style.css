@@ -206,6 +206,9 @@ body {
 .header .menu__cup:hover:after {
   width: 100%;
 }
+.header .menu__cup:hover:after img {
+  cursor: default;
+}
 .header .menu__cup .menu__link-active::after {
   position: absolute;
   content: "";
@@ -222,6 +225,13 @@ body {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   border-radius: 100px;
+  cursor: default;
+}
+.header .menu__cup-active {
+  cursor: default;
+}
+.header .menu__cup-active .menu__link-active {
+  cursor: default;
 }
 
 .section__enjoy {
@@ -1073,8 +1083,8 @@ body {
   transition: 0.5s;
 }
 .main .main__tabs .tab-item:hover {
-  background-color: #665F55;
-  border: 1px solid #665F55;
+  background-color: #665f55;
+  border: 1px solid #665f55;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -1112,8 +1122,8 @@ body {
 }
 .main .main__tabs .tab-item-active {
   cursor: default;
-  background-color: #665F55;
-  border: 1px solid #665F55;
+  background-color: #665f55;
+  border: 1px solid #665f55;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
