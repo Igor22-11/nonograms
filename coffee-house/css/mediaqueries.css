@@ -1,0 +1,86 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  .header .nav {
+    display: none;
+  }
+  .header .menu__cup .menu__link,
+  .header .menu__cup img {
+    display: none;
+  }
+  .header .menu__cup .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .section__enjoy {
+    padding: 100px 60px 100px 60px;
+  }
+  .section__enjoy .enjoy__wrapper .enjoy__button {
+    gap: 8px;
+  }
+  .section__enjoy .enjoy__wrapper .enjoy__button img {
+    opacity: 1;
+  }
+  .section__enjoy .enjoy__wrapper .enjoy__button span {
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .section__favorite .favorite__slider .favorite__button-prev {
+    margin: 0px;
+  }
+  .section__favorite .favorite__slider .favorite__button-next {
+    margin-right: 0px;
+  }
+  .section__favorite .favorite__slider .favorite__slider-inner {
+    margin-top: 0px;
+  }
+  .section__about .about__description .mark__word {
+    display: inline;
+  }
+  .section__about .about__pictures .about__pictures-column {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 688px;
+  }
+  .section__about .about__pictures .about__pictures-column .about-picture-small {
+    display: none;
+  }
+  .section__mobile-app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section__mobile-app .mobile__description {
+    width: 688px;
+  }
+  .section__mobile-app .mobile__picure {
+    margin-top: 100px;
+  }
+  .footer {
+    padding: 100px 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .footer__description {
+    width: 568px;
+  }
+  .footer .footer__contacts {
+    margin-top: 100px;
+    gap: 0;
+  }
+  .footer .footer__contacts .footer__contacts-wrapper {
+    margin-top: 41px;
+    padding-bottom: 5px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 19px;
+  }
+}
