@@ -83,4 +83,25 @@
             justify-content: space-between;
     gap: 19px;
   }
+  .main .main__title {
+    max-width: 688px;
+  }
+  .main .main__title .mark__word {
+    display: inline;
+  }
+  .main .main__tabs {
+    gap: 14px;
+  }
+  .main .product__wrapper {
+    width: 688px;
+    padding: 0 14px;
+  }
+  .main .product__wrapper .product__card-hidden {
+    display: none;
+  }
+  .button__refresh {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }

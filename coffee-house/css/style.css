@@ -227,7 +227,7 @@ body {
 .header .menu__cup .burger .burger-line {
   width: 16px;
   height: 1px;
-  background: #403F3D;
+  background: #403f3d;
   border-radius: 100px;
 }
 .header .menu__cup .menu__link-active::after {
@@ -878,6 +878,22 @@ body {
   color: #e1d4c9;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+}
+
+.button__refresh {
+  width: 60px;
+  height: 60px;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 .footer {

@@ -94,4 +94,32 @@
       }
     }
   }
+
+
+// menu
+.main{
+  .main__title{
+    max-width: 688px;
+    .mark__word {
+      display: inline;
+    }
+  }
+
+  .main__tabs {
+    gap: 14px;
+  }
+
+  .product__wrapper{
+    width: 688px;
+    padding: 0 14px;
+    .product__card-hidden{
+      display: none;
+    }
+  }
+}
+
+
+.button__refresh{
+  display: flex;
+}
 }

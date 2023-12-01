@@ -116,10 +116,10 @@ body {
       position: relative;
       top: 2px;
 
-      .burger-line{
+      .burger-line {
         width: 16px;
         height: 1px;
-        background: #403F3D;
+        background: #403f3d;
         border-radius: 100px;
       }
     }
@@ -601,6 +601,20 @@ body {
       }
     }
   }
+}
+
+//button__refresh
+
+.button__refresh {
+  width: 60px;
+  height: 60px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 
 //footer
