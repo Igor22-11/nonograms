@@ -106,6 +106,7 @@ body {
   height: auto;
   padding: 20px 40px 40px 40px;
   overflow: hidden;
+  position: relative;
 }
 
 .header {
@@ -212,32 +213,6 @@ body {
     width: 100%;
   }
 }
-.header .menu__cup .burger {
-  display: none;
-  width: 44px;
-  height: 44px;
-  border-radius: 100px;
-  border: 1px solid #665f55;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 8px;
-  position: relative;
-  top: 2px;
-}
-.header .menu__cup .burger .burger-line {
-  width: 16px;
-  height: 1px;
-  background: #403f3d;
-  border-radius: 100px;
-}
 .header .menu__cup .menu__link-active::after {
   position: absolute;
   content: "";
@@ -256,6 +231,45 @@ body {
   border-radius: 100px;
   cursor: default;
 }
+.header .burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+}
+.header .burger .burger-line {
+  width: 16px;
+  height: 1px;
+  background: #403f3d;
+  border-radius: 100px;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.header .burger .burger-line-top-active {
+  -webkit-transform: rotate(45deg) translate(3px, 3px);
+      -ms-transform: rotate(45deg) translate(3px, 3px);
+          transform: rotate(45deg) translate(3px, 3px);
+}
+.header .burger .burger-line-bottom-active {
+  -webkit-transform: rotate(-45deg) translate(3px, -3px);
+      -ms-transform: rotate(-45deg) translate(3px, -3px);
+          transform: rotate(-45deg) translate(3px, -3px);
+}
 .header .menu__cup-active {
   cursor: default;
 }
@@ -264,6 +278,91 @@ body {
 }
 .header .menu__cup-active img {
   cursor: default;
+}
+
+.burger-menu {
+  width: 100vw;
+  max-width: 768px;
+  height: calc(100vh - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  background-color: #e1d4c9;
+  z-index: 10;
+  position: absolute;
+  top: 100px;
+  left: 100%;
+  padding: 60px 40px 60px 40px;
+  -webkit-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  color: #403f3d;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+.burger-menu .menu__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 60px;
+}
+.burger-menu .menu__nav .menu__cup {
+  margin-top: 40px;
+  position: relative;
+}
+.burger-menu .menu__nav .menu__cup a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.burger-menu .menu__nav .menu__cup a img {
+  width: 40px;
+  height: 40px;
+}
+.burger-menu .menu__nav .menu__cup .menu__link-active::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -6px;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #403f3d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 100px;
+  cursor: default;
+}
+
+.burger-menu-active {
+  left: 0vh;
 }
 
 .section__enjoy {

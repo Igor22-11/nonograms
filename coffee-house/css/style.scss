@@ -21,6 +21,7 @@ body {
   height: auto;
   padding: 20px 40px 40px 40px;
   overflow: hidden;
+  position: relative;
 }
 
 // header
@@ -108,27 +109,6 @@ body {
       }
     }
 
-    .burger {
-      display: none;
-      width: 44px;
-      height: 44px;
-      border-radius: 100px;
-      border: 1px solid #665f55;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 8px;
-      position: relative;
-      top: 2px;
-
-      .burger-line {
-        width: 16px;
-        height: 1px;
-        background: #403f3d;
-        border-radius: 100px;
-      }
-    }
-
     .menu__link-active::after {
       position: absolute;
       content: "";
@@ -145,6 +125,34 @@ body {
       cursor: default;
     }
   }
+
+  .burger {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
+    border: 1px solid #665f55;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+
+    .burger-line {
+      width: 16px;
+      height: 1px;
+      background: #403f3d;
+      border-radius: 100px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .burger-line-top-active {
+      transform: rotate(45deg) translate(3px, 3px);
+    }
+    .burger-line-bottom-active {
+      transform: rotate(-45deg) translate(3px, -3px);
+    }
+  }
+
   .menu__cup-active {
     cursor: default;
     .menu__link-active {
@@ -154,6 +162,72 @@ body {
       cursor: default;
     }
   }
+}
+
+//burger
+
+.burger-menu {
+  width: 100vw;
+  max-width: 768px;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  // max-width: 768px;
+  background-color: #e1d4c9;
+  z-index: 10;
+  position: absolute;
+  top: 100px;
+  left: 100%;
+  padding: 60px 40px 60px 40px;
+  transition: left 0.5s ease;
+  color: #403f3d;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+
+  .menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 60px;
+
+    .menu__cup {
+      margin-top: 40px;
+      position: relative;
+      a {
+        display: flex;
+        gap: 16px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .menu__link-active::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: -6px;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #403f3d;
+        transition: 0.3s;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 100px;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.burger-menu-active {
+  left: 0vh;
 }
 
 // enjoy

@@ -15,7 +15,7 @@
   .header .menu__cup img {
     display: none;
   }
-  .header .menu__cup .burger {
+  .header .burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

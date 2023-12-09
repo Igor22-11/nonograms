@@ -1,6 +1,6 @@
 @media (max-width: 1400px) {
-  .section__about{
-    .about__pictures{
+  .section__about {
+    .about__pictures {
       flex-wrap: wrap;
     }
   }
@@ -20,9 +20,9 @@
       img {
         display: none;
       }
-      .burger {
-        display: flex;
-      }
+    }
+    .burger {
+      display: flex;
     }
   }
 
@@ -68,16 +68,16 @@
     }
     .about__pictures {
       width: 100%;
-        max-width: 688px;
+      max-width: 688px;
       justify-content: center;
       flex-wrap: wrap;
       .about__pictures-column {
         align-items: center;
         width: 100%;
         max-width: 688px;
-        .about-picture{
+        .about-picture {
           width: 100%;
-        max-width: 688px;
+          max-width: 688px;
         }
         .about-picture-small {
           display: none;
@@ -134,13 +134,13 @@
       width: 100%;
       max-width: 688px;
       padding: 0 14px;
-      .product__card{
+      .product__card {
         width: 100%;
         max-width: 310px;
         min-height: 506px;
-        .product__view{
+        .product__view {
           width: 100%;
-        max-width: 310px;
+          max-width: 310px;
         }
       }
       .product__card-hidden {
@@ -161,9 +161,7 @@
   }
 
   .section__enjoy {
-
     .enjoy__wrapper {
-
       .enjoy__title {
         font-size: 42px;
         .mark__word {
@@ -175,7 +173,6 @@
   }
 
   .section__mobile-app {
-
     .mobile__description {
       max-width: 430px;
       height: 380px;
@@ -378,9 +375,8 @@
   }
 }
 
-
-.section__mobile-app{
-  .mobile__apps{
+.section__mobile-app {
+  .mobile__apps {
     .button__mobile-app {
       @media (hover: hover) {
         &:hover,
@@ -406,13 +402,13 @@
 }
 
 @media (max-width: 370px) {
-.main{
-  .main__tabs{
-    width: 100%;
-    max-width: 370px;
-    flex-direction: column;
-    height: 100%;
-    min-height: 154px;
+  .main {
+    .main__tabs {
+      width: 100%;
+      max-width: 370px;
+      flex-direction: column;
+      height: 100%;
+      min-height: 154px;
+    }
   }
-}
 }
