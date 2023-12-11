@@ -1,5 +1,6 @@
+'use strict'
 window.addEventListener('DOMContentLoaded', () => {
-//burger
+  //burger
   const burgerBtn = document.querySelector('.burger');
   const burgerMenu = document.querySelector('.burger-menu');
   const burgerLinks = burgerMenu.querySelectorAll('.menu__item')
@@ -31,7 +32,4 @@ window.addEventListener('DOMContentLoaded', () => {
       closeBurger();
     })
   })
-
-
-  
 })
