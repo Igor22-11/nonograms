@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee-House</title>
-    <link rel="icon" href="assets/icons/favicon.ico">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet">
+      rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <!-- header -->
 
       <header class="header">
-        <a href="#"><img src="assets/img/logo.svg" alt="logo"></a>
+        <a href="#"><img src="assets/img/logo.svg" alt="logo" /></a>
         <nav class="nav">
           <ul class="menu__nav">
             <li class="menu__item">
@@ -39,19 +39,43 @@
 
         <div class="menu__cup">
           <a href="menu.html" class="menu__link">Menu</a>
-          <img src="assets/img/coffee-cup.svg" alt="cup">
-          <div class="burger">
-            <div class="burger-line"></div>
-            <div class="burger-line"></div>
-          </div>
+          <img src="assets/img/coffee-cup.svg" alt="cup" />
+        </div>
+        <div class="burger">
+          <div class="burger-line"></div>
+          <div class="burger-line"></div>
         </div>
       </header>
+
+      <!-- burger -->
+
+      <div class="burger-menu">
+        <ul class="menu__nav">
+          <li class="menu__item">
+            <a href="#favorite" class="menu__link">Favorite coffee</a>
+          </li>
+          <li class="menu__item">
+            <a href="#about" class="menu__link">About</a>
+          </li>
+          <li class="menu__item">
+            <a href="#mobile-app" class="menu__link">Mobile app</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contact__us" class="menu__link">Contact us</a>
+          </li>
+          <li class="menu__item menu__cup">
+            <a href="menu.html" class="menu__link">Menu
+            <img src="assets/img/coffee-cup.svg" alt="cup" />
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- enjoy -->
 
       <section class="section__enjoy">
         <video autoplay muted loop class="video-background">
-          <source src="assets/video/video(720p).mp4" type="video/mp4">
+          <source src="assets/video/video(720p).mp4" type="video/mp4" />
         </video>
 
         <div class="enjoy__wrapper">
@@ -68,12 +92,10 @@
 
           <a href="menu.html">
             <div class="enjoy__button">
-            <span>Menu</span>
-            <img src="assets/img/coffee-cup.svg" alt="cup">
-          </div>
-            
-        </a>
-
+              <span>Menu</span>
+              <img src="assets/img/coffee-cup.svg" alt="cup" />
+            </div>
+          </a>
         </div>
       </section>
 
@@ -106,9 +128,13 @@
             </svg>
           </div>
 
+
+          <div class="slider-window">
+            <div class="slider-line">
+
           <div class="favorite__slider-inner">
             <div class="favorite__slider-img">
-              <img src="assets/img/main/coffee-slider-1.png" alt="coffee">
+              <img src="assets/img/main/slider/coffee-slider-1.png" alt="coffee" />
             </div>
             <div class="favorite__text-container">
               <div class="favorite__text-title">S’mores Frappuccino</div>
@@ -119,6 +145,35 @@
               <div class="favorite__text-price">$5.50</div>
             </div>
           </div>
+
+          <div class="favorite__slider-inner">
+            <div class="favorite__slider-img">
+              <img src="assets/img/main/slider/coffee-slider-2.png" alt="coffee" />
+            </div>
+            <div class="favorite__text-container">
+              <div class="favorite__text-title">Caramel Macchiato</div>
+              <div class="favorite__text-description">
+                Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.
+              </div>
+              <div class="favorite__text-price">$5.00</div>
+            </div>
+          </div>
+
+          <div class="favorite__slider-inner">
+            <div class="favorite__slider-img">
+              <img src="assets/img/main/slider/coffee-slider-3.png" alt="coffee" />
+            </div>
+            <div class="favorite__text-container">
+              <div class="favorite__text-title">Ice coffee</div>
+              <div class="favorite__text-description">
+                A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.
+              </div>
+              <div class="favorite__text-price">$4.50</div>
+            </div>
+          </div>
+
+          </div>
+        </div>
 
           <div class="favorite__button-next">
             <svg
@@ -144,9 +199,9 @@
         </div>
 
         <div class="favorite__slider-indicators">
-          <div class="slider__dot-indicator indicator-active"></div>
-          <div class="slider__dot-indicator"></div>
-          <div class="slider__dot-indicator"></div>
+          <div class="slider__dot-indicator"><div class="indic indicator-active"></div></div>
+          <div class="slider__dot-indicator"><div class="indic"></div></div>
+          <div class="slider__dot-indicator"><div class="indic"></div></div>
         </div>
       </section>
 
@@ -163,19 +218,19 @@
         <div class="about__pictures">
           <div class="about__pictures-column">
             <div class="about-picture about-picture-big">
-              <img src="assets/img/main/about/about-1.jpg" alt="picture">
+              <img src="assets/img/main/about/about-1.jpg" alt="picture" />
             </div>
             <div class="about-picture about-picture-small">
-              <img src="assets/img/main/about/about-2.jpg" alt="picture">
+              <img src="assets/img/main/about/about-2.jpg" alt="picture" />
             </div>
           </div>
 
           <div class="about__pictures-column">
             <div class="about-picture about-picture-small">
-              <img src="assets/img/main/about/about-3.jpg" alt="picture">
+              <img src="assets/img/main/about/about-3.jpg" alt="picture" />
             </div>
             <div class="about-picture about-picture-big">
-              <img src="assets/img/main/about/about-4.jpg" alt="picture">
+              <img src="assets/img/main/about/about-4.jpg" alt="picture" />
             </div>
           </div>
         </div>
@@ -244,7 +299,7 @@
           </div>
         </div>
         <div class="mobile__picure">
-          <img src="assets/img/main/mobile-screens.png" alt="phone">
+          <img src="assets/img/main/mobile-screens.png" alt="phone" />
         </div>
       </section>
 
@@ -391,5 +446,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/burger.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
