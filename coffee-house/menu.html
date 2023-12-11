@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
-    <link rel="icon" href="assets/icons/favicon.ico" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/mediaqueries.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="assets/icons/favicon.ico">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet">
   </head>
   <body>
     <div class="container">
       <!-- header -->
 
       <header class="header">
-        <a href="index.html"><img src="assets/img/logo.svg" alt="logo" /></a>
+        <a href="index.html"><img src="assets/img/logo.svg" alt="logo"></a>
         <nav class="nav">
           <ul class="menu__nav">
             <li class="menu__item">
@@ -41,7 +41,7 @@
 
         <div class="menu__cup menu__cup-active">
           <a href="#" class="menu__link menu__link-active">Menu</a>
-          <img src="assets/img/coffee-cup.svg" alt="cup" />
+          <img src="assets/img/coffee-cup.svg" alt="cup">
         </div>
         <div class="burger">
           <div class="burger-line"></div>
@@ -68,7 +68,7 @@
           <li class="menu__item menu__cup">
             <a class="menu__link menu__link-active"
               >Menu
-              <img src="assets/img/coffee-cup.svg" alt="cup" />
+              <img src="assets/img/coffee-cup.svg" alt="cup">
             </a>
           </li>
         </ul>
@@ -86,14 +86,14 @@
               <img
                 src="assets/icons/coffee.png"
                 alt="coffee"
-                class="tab__pic" />
+                class="tab__pic">
             </div>
             <h2 class="tab__text">Coffee</h2>
           </div>
 
           <div class="tab-item tea-btn" data-tea>
             <div class="tab__pic-wrapper">
-              <img src="assets/icons/tea.png" alt="tea" class="tab__pic" />
+              <img src="assets/icons/tea.png" alt="tea" class="tab__pic">
             </div>
 
             <h2 class="tab__text">Tea</h2>
@@ -104,7 +104,7 @@
               <img
                 src="assets/icons/dessert.png"
                 alt="dessert"
-                class="tab__pic" />
+                class="tab__pic">
             </div>
             <h2 class="tab__text">Dessert</h2>
           </div>
@@ -139,98 +139,7 @@
 
       <section class="modal">
         <div class="modal__wrapper">
-          <!-- <div class="modal__img">
-            <img src="./assets/img/menu/coffee-1.jpg" alt="coffee" />
-          </div>
-          <div class="modal__content">
-            <div class="modal__text">
-              <div class="modal__text-title">Irish coffee</div>
-              <div class="modal__text-description">
-                Fragrant black coffee with Jameson Irish whiskey and whipped
-                milk
-              </div>
-            </div>
-            <div class="modal__choice choise__value">
-              <div class="size__title">Size</div>
-              <div class="size__buttons">
-                <div class="size__btn size__btn-active">
-                  <div class="size__btn-text">S</div>
-                  <div class="size__btn-value">200 ml</div>
-                </div>
-                <div class="size__btn">
-                  <div class="size__btn-text">M</div>
-                  <div class="size__btn-value">300 ml</div>
-                </div>
-                <div class="size__btn">
-                  <div class="size__btn-text">L</div>
-                  <div class="size__btn-value">400 ml</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal__choice choise__add">
-              <div class="size__title">Additives</div>
-              <div class="size__buttons">
-                <div class="size__btn">
-                  <div class="size__btn-text">1</div>
-                  <div class="size__btn-value">Sugar</div>
-                </div>
-                <div class="size__btn">
-                  <div class="size__btn-text">2</div>
-                  <div class="size__btn-value">Cinnamon</div>
-                </div>
-                <div class="size__btn">
-                  <div class="size__btn-text">3</div>
-                  <div class="size__btn-value">Syrup</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal__sum">
-              <div class="modal__sum-title">Total:</div>
-              <div class="modal__sum-tota">$7.00</div>
-            </div>
-
-            <div class="modal__info">
-              <div class="modal__info-sign">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none">
-                  <g clip-path="url(#clip0_268_12877)">
-                    <path
-                      d="M8 7.66663V11"
-                      stroke="#403F3D"
-                      stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M8 5.00667L8.00667 4.99926"
-                      stroke="#403F3D"
-                      stroke-linecap="round"
-                      stroke-linejoin="round" />
-                    <path
-                      d="M7.99967 14.6667C11.6816 14.6667 14.6663 11.6819 14.6663 8.00004C14.6663 4.31814 11.6816 1.33337 7.99967 1.33337C4.31778 1.33337 1.33301 4.31814 1.33301 8.00004C1.33301 11.6819 4.31778 14.6667 7.99967 14.6667Z"
-                      stroke="#403F3D"
-                      stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_268_12877">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </div>
-              <div class="modal__info-text">
-                The cost is not final. Download our mobile app to see the final
-                price and place your order. Earn loyalty points and enjoy your
-                favorite coffee with up to 20% discount.
-              </div>
-            </div>
-            <div class="modal__info-btn">Close</div>
-          </div> -->
+          <h2>Modal</h2>
         </div>
       </section>
 

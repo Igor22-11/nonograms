@@ -1,8 +1,5 @@
 'use strict'
 window.addEventListener('DOMContentLoaded', () => {
-
-  alert('Уважаемый Проверяющий, пожалуйста, проверьте мою работу в четверг. Спасибо!' )
-
   //************* slider **********************
 
   const imgsSlider = document.querySelectorAll('.favorite__slider-inner');
@@ -34,9 +31,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   function nextSlide() {
-    indicators[count].style.width = '0%'; 
+    indicators[count].style.width = '0%';
     indicators[count].classList.remove('indicator-active');
-    
+
     count++;
     if (count >= imgsSlider.length) {
       count = 0;
@@ -45,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
     indicators[count].classList.add('indicator-active');
 
     /******/
-    
+
     // indicators[count].style.animation = 'none';
     // indicators[count].style.width = '0';
     // indicators[count].offsetHeight; 
@@ -54,9 +51,9 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   function prevSlide() {
-    indicators[count].style.width = '0%'; 
+    indicators[count].style.width = '0%';
     indicators[count].classList.remove('indicator-active');
-    
+
     count--;
     if (count < 0) {
       count = imgsSlider.length - 1;
@@ -108,7 +105,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function slideMove() {
     if (xDiff < 0) {
       nextSlide()
-      
+
     }
     if (xDiff > 0) {
       prevSlide()
@@ -178,8 +175,8 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   startAutoSlide()
-  
-// ***************************************
-  
 
+  // ***************************************
+
+  alert('Уважаемый Проверяющий, пожалуйста, проверьте мою работу в четверг. Спасибо!')
 })
