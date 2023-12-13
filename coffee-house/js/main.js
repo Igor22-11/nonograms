@@ -7,14 +7,16 @@ window.addEventListener('DOMContentLoaded', () => {
   const btnNext = document.querySelector('.favorite__button-next');
   const btnPrev = document.querySelector('.favorite__button-prev');
   const sliderWindow = document.querySelector('.slider-window');
+  
   const indicators = document.querySelectorAll('.indic');
 
   let count = 0;
   let width;
-  let currentAnimation = null;
+  let isPaused = false;
+let countPercent = 0;
 
-
-  indicators[count].classList.add('indicator-active');
+ 
+  
 
   function init() {
     width = sliderWindow.offsetWidth;
@@ -24,42 +26,35 @@ window.addEventListener('DOMContentLoaded', () => {
       item.style.width = width + 'px';
       item.style.height = 'auto';
     });
-    rollSlider();
+    //rollSlider();
 
   }
   init()
 
 
   function nextSlide() {
-    indicators[count].style.width = '0%';
-    indicators[count].classList.remove('indicator-active');
+countPercent = 0
+	indicators[count].style.width = countPercent + '%';
 
     count++;
+	
     if (count >= imgsSlider.length) {
       count = 0;
     }
     rollSlider();
-    indicators[count].classList.add('indicator-active');
-
-    /******/
-
-    // indicators[count].style.animation = 'none';
-    // indicators[count].style.width = '0';
-    // indicators[count].offsetHeight; 
-    // indicators[count].style.animation = 'increaseWidth 5s forwards';
-    // currentAnimation = indicators[count].animate([{ width: '0%' }, { width: '100%' }], { duration: 5000, fill: 'forwards' });
   }
 
   function prevSlide() {
-    indicators[count].style.width = '0%';
-    indicators[count].classList.remove('indicator-active');
-
+	  countPercent = 0
+	  indicators[count].style.width = countPercent + '%';
+      countPercent = 0
     count--;
     if (count < 0) {
       count = imgsSlider.length - 1;
     }
     rollSlider();
-    indicators[count].classList.add('indicator-active');
+
+    //indicators[count].classList.add('indicator-active');
   }
 
   window.addEventListener('resize', init);
@@ -70,27 +65,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function rollSlider() {
     sliderLine.style.transform = 'translate(-' + count * width + 'px)';
-    // sliderLine.style.left = -count * width +'px';
   }
 
   //touch event
 
 
-  sliderWindow.addEventListener('touchstart', handelTouchStart, false);
+
+
+  sliderWindow.addEventListener('touchstart', function (e) {
+    handelTouchStart(e);
+    pauseAutoSlide();
+  }, false);
+
   sliderWindow.addEventListener('touchmove', handelTouchMove, false);
-  sliderWindow.addEventListener('touchend', slideMove, false);
+
+  sliderWindow.addEventListener('touchend', function () {
+    slideMove();
+    continueAutoSlide();
+  }, false);
 
   let x1;
   let x2;
   let xDiff;
 
-  let computedStyle;
-  let currentWidth;
+
 
   function handelTouchStart(e) {
     e.preventDefault();
     const firstTouch = e.touches[0];
-    stopAutoSlide()
     x1 = firstTouch.clientX;
   }
 
@@ -104,79 +106,96 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function slideMove() {
     if (xDiff < 0) {
-      nextSlide()
-
+      nextSlide();
     }
     if (xDiff > 0) {
-      prevSlide()
-
+      prevSlide();
     }
 
     x1 = null;
     x2 = null;
     xDiff = null;
-    startAutoSlide()
   }
+
+
+
 
 
   // mouse event
-  const intervalDuration = 5000;
-  let intervalId;
 
-  sliderWindow.addEventListener('mousedown', handleSliderClick);
-  sliderWindow.addEventListener('mouseup', slideMove);
-  sliderWindow.addEventListener('mouseleave', slideMove);
 
-  function handleSliderClick(e) {
-    if (e.button !== 0) return;
-    x1 = e.clientX;
+
+  
+
+
+  sliderWindow.addEventListener('mousedown', function () {
+    handleSliderClick();
+    pauseAutoSlide();
+  });
+
+  sliderWindow.addEventListener('mouseup', function () {
+    slideMove();
+    continueAutoSlide();
+  });
+
+  sliderWindow.addEventListener('mouseleave', function () {
+    slideMove();
+    continueAutoSlide();
+  });
+
+  function handleSliderClick() {
+    x1 = event.clientX;
     sliderWindow.addEventListener('mousemove', handleMouseMove);
   }
 
-  function handleMouseMove(e) {
-    stopAutoSlide()
-    if (e.buttons !== 1) return;
+  function handleMouseMove() {
+    if (event.buttons !== 1) return;
     if (!x1) return false;
 
-    x2 = e.clientX;
+    x2 = event.clientX;
     xDiff = x2 - x1;
-    sliderWindow.removeEventListener('mousemove', handleMouseMove);
   }
+
+
 
   // autoslide
 
+  //const intervalDuration = Math.round(8/1000*100);
 
-  function startAutoSlide() {
-    intervalId = setInterval(nextSlide, intervalDuration);
+  
+const intervalDuration = 40; 
+let intervalId;
+
+
+function startAutoSlide() {
+  intervalId = setInterval(function () {
+    if (!isPaused) {
+      countPercent++;
+
+      if (countPercent >= 105) {
+        countPercent = 0;
+        nextSlide();
+      }
+
+      indicators[count].style.width = countPercent + '%';
+    }
+  }, intervalDuration);
+}
+
+startAutoSlide();
+
+
+  sliderWindow.addEventListener('mousemove', pauseAutoSlide);
+
+  function pauseAutoSlide() {
+    isPaused = true;
   }
 
-  sliderWindow.addEventListener('mousemove', stopAutoSlide)
-  function stopAutoSlide() {
-    clearInterval(intervalId);
 
-    /****/
-    /***/
-    getCurrentWidth()
-    /******/
-    /****/
-
-    indicators[count].classList.remove('indicator-active');
+  function continueAutoSlide() {
+    isPaused = false;
+    
   }
 
-  function getCurrentWidth() {
-    /***/
-    computedStyle = window.getComputedStyle(indicators[count]);
-    currentWidth = computedStyle.getPropertyValue('width');
-    indicators[count].style.animation = 'none';
-    indicators[count].style.width = currentWidth;
 
-    indicators[count].classList.remove('indicator-active');
-    /******/
-  }
-
-  startAutoSlide()
-
-  // ***************************************
-
-  alert('Уважаемый Проверяющий, пожалуйста, проверьте мою работу в четверг. Спасибо!')
 })
