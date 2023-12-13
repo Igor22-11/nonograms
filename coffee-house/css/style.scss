@@ -957,6 +957,7 @@ body {
     margin: 20px;
     width: 100%;
     max-width: 800px;
+    // height: 504px;
     min-height: 504px;
     background: #e1d4c9;
     border-radius: 40px;
@@ -984,7 +985,7 @@ body {
     .modal__content {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 19px;
       width: 57%;
 
       .modal__text {
@@ -1028,7 +1029,7 @@ body {
         .size__buttons {
           display: flex;
           justify-content: start;
-          gap: 8px;
+          gap: 7px;
           width: 100%;
           min-height: 48px;
 
@@ -1147,6 +1148,7 @@ body {
         justify-content: center;
         align-items: center;
         gap: 8px;
+        font-weight: 600;
         cursor: pointer;
         transition: 0.5s all;
 
