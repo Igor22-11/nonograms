@@ -177,10 +177,12 @@
       .modal__content {
         width: 50%;
         min-height: 594px;
+        gap: 20px;
         .modal__choice {
           .size__buttons {
             flex-wrap: wrap;
             min-height: 100px;
+            gap: 6px;
           }
         }
 
@@ -450,6 +452,8 @@
 
   .modal {
     .modal__wrapper {
+      width: 100%;
+      max-width: 343px;
       padding: 16px;
       height: 626px;
 align-items: start;
@@ -475,6 +479,16 @@ justify-content: start;
 
         .modal__info-btn {
 
+        }
+        .modal__sum{
+          .modal__sum-tota{
+            position: relative;
+            right: -2px;
+          }
+          
+        }
+        .modal__info-btn{
+          width: 101%;
         }
       }
     }

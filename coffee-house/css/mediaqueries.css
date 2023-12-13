@@ -155,11 +155,13 @@
   .modal .modal__wrapper .modal__content {
     width: 50%;
     min-height: 594px;
+    gap: 20px;
   }
   .modal .modal__wrapper .modal__content .modal__choice .size__buttons {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     min-height: 100px;
+    gap: 6px;
   }
   .modal .modal__wrapper .modal__content .modal__info-btn {
     width: 100%;
@@ -361,6 +363,8 @@
             flex-direction: column;
   }
   .modal .modal__wrapper {
+    width: 100%;
+    max-width: 343px;
     padding: 16px;
     height: 626px;
     -webkit-box-align: start;
@@ -378,6 +382,13 @@
     height: 594px;
     position: relative;
     bottom: 21px;
+  }
+  .modal .modal__wrapper .modal__content .modal__sum .modal__sum-tota {
+    position: relative;
+    right: -2px;
+  }
+  .modal .modal__wrapper .modal__content .modal__info-btn {
+    width: 101%;
   }
 }
 @media (hover: hover) {
