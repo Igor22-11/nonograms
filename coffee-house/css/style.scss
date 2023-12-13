@@ -519,25 +519,7 @@ body {
       display: flex;
       justify-content: start;
       align-items: center;
-      // &::after {
-      //   position: absolute;
-      //   content: "";
-      //   left: 0;
-      //   top: 0;
-      //   display: block;
-      //   width: 0%;
-      //   height: 4px;
-      //   background: #665f55;
-      //   transition: 1s;
-      //   border-radius: 100px;
-      //   // transform: translateX(0%);
-      //   .indicator-active {
-      //     &::after {
-      //       width: 100%;
-      //       transition: 5s;
-      //     }
-      //   }
-      // }
+
     }
   }
 }
@@ -547,18 +529,11 @@ body {
   background: #665f55;
   position: relative;
   border-radius: 100px;
-  transition: 1s;
+  transition: 0.3s;
 }
 
-.indicator-active {
-  animation: increaseWidth 5s none;
-}
 
-@keyframes increaseWidth {
-  to {
-    width: 100%;
-  }
-}
+
 
 //about
 

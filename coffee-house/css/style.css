@@ -746,26 +746,10 @@ body {
   background: #665f55;
   position: relative;
   border-radius: 100px;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.indicator-active {
-  -webkit-animation: increaseWidth 5s none;
-          animation: increaseWidth 5s none;
-}
-
-@-webkit-keyframes increaseWidth {
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes increaseWidth {
-  to {
-    width: 100%;
-  }
-}
 .section__about {
   width: 100%;
   min-height: 1325px;
