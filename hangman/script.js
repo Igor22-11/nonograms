@@ -102,11 +102,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   pageStructure();
 
-
-
-
-
-
   //** Keyboard */
 
   function createKeyboard() {
@@ -139,9 +134,6 @@ window.addEventListener('DOMContentLoaded', () => {
   function handleKeyPress(key, keyElement) {
     if (keyElement && !keyElement.classList.contains('keyboard__key-active')) {
       keyElement.classList.add('keyboard__key-active');
-
-
-      //добавить ввызов функции проверки
       checkWord(key)
     }
   }
@@ -153,9 +145,6 @@ window.addEventListener('DOMContentLoaded', () => {
     section.classList.add(className);
     return section;
   }
-
-
-
 
 
   const wordElement = document.querySelector('.word');
@@ -186,15 +175,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const hiddenPartOfBody = document.querySelectorAll('.part__body');
 
 
-
   function showWord() {
     for (let i = 0; i < wordForGame[0].length; i++) {
       selectedWordElement.append(createElementWithClass('div', 'letter'));
     }
-    console.log(wordForGame[0]);
+
   }
   showWord()
-
 
 
   let letters = Array.from(wordForGame[0].split(''), () => 0);
@@ -217,15 +204,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (numberOfAttempts === 6) {
       setTimeout(function () {
-        alert('ПРОИГРАЛ')
+        showModal('Game over. You lose!');
       }, 500);
 
     }
 
     if (!letters.includes(0)) {
-      alert('УРА ПОБЕДА')
-
-      // location.reload();
+      showModal('Game over. You win!')
     }
   }
 
@@ -245,51 +230,40 @@ window.addEventListener('DOMContentLoaded', () => {
 
       }
     })
-    // selectedWordElement
-    // console.log(letters)
   }
 
 
+  // Modal
+
+
+  function showModal(title) {
+    document.body.style.overflow = 'hidden';
 
 
 
 
+    const modal = createSectionWithClass('modal');
+    document.body.append(modal);
+
+    const modal__wrapper = createElementWithClass('div', 'modal__wrapper');
+    modal.append(modal__wrapper);
 
 
+    const modalTitle = createElementWithClass('div', 'modalTitle')
+    modal__wrapper.append(modalTitle);
+    modalTitle.textContent = title;
 
+    const modalMessage = createElementWithClass('div', 'modal__message')
+    modal__wrapper.append(modalMessage);
+    modalMessage.textContent = `The word was: ${wordForGame[0]}`;
 
+    const buttonNewGame = document.createElement('button');
+    buttonNewGame.classList.add('button__new-game');
+    modal__wrapper.append(buttonNewGame);
+    buttonNewGame.textContent = 'Play again';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    buttonNewGame.addEventListener('click', function () {
+      location.reload();
+    });
+  }
 })
