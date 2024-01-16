@@ -30,13 +30,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   let numberOfAttempts = 0;
-  const wordForGame = words[Math.floor(Math.random() * (words.length))];
+  let wordForGame = words[Math.floor(Math.random() * (words.length))];
+
 
 
   const gallowsWrapper = document.createElement('div');
 
   function createGallowsWrapper() {
-
+    gallowsWrapper.innerHTML = ''
     gallowsWrapper.classList.add('gallows-wrapper');
 
     const gallowsImg = document.createElement('img');
@@ -54,6 +55,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function createHumanWrapper() {
     const humanWrapper = document.createElement('div');
+    humanWrapper.innerHTML = '';
     humanWrapper.classList.add('human__wrapper');
 
     humanSrc.forEach(part => {
@@ -83,6 +85,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function pageStructure() {
     const main = document.createElement('main');
+    main.innerHTML = ''
     main.classList.add('main');
 
     const gallows = document.createElement('section');
@@ -93,6 +96,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     document.body.append(main);
     main.append(gallows, game);
+
+    gallows.innerHTML = ''
 
     gallows.append(createGallowsWrapper());
     gallows.querySelector('.gallows-wrapper').append(createHumanWrapper());
@@ -106,6 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   function createKeyboard() {
     const keyboardSection = document.querySelector('.keyboard');
+    keyboardSection.innerHTML = ''
 
     alphabet.forEach(item => {
       const key = document.createElement('button');
@@ -116,18 +122,9 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    window.addEventListener('keydown', (e) => {
-      const key = e.code.slice(3).toLowerCase();
-      if (alphabet.includes(key.toLowerCase())) {
-        const keyElements = document.querySelectorAll('.keyboard__key');
-        keyElements.forEach(keyElement => {
-          if (keyElement.textContent === key.toUpperCase()) {
-            handleKeyPress(key, keyElement);
-          }
-        });
-      }
-    });
+    window.addEventListener('keydown', keyPress);
   }
+
 
   createKeyboard();
 
@@ -171,11 +168,13 @@ window.addEventListener('DOMContentLoaded', () => {
   changeAttempts(numberOfAttempts);
 
 
-  const selectedWordElement = document.querySelector('.selectedWord');
-  const hiddenPartOfBody = document.querySelectorAll('.part__body');
+  // const selectedWordElement = document.querySelector('.selectedWord');
+  // const hiddenPartOfBody = document.querySelectorAll('.part__body');
 
 
   function showWord() {
+    const selectedWordElement = document.querySelector('.selectedWord');
+    selectedWordElement.innerHTML = ''
     for (let i = 0; i < wordForGame[0].length; i++) {
       selectedWordElement.append(createElementWithClass('div', 'letter'));
     }
@@ -187,8 +186,13 @@ window.addEventListener('DOMContentLoaded', () => {
   let letters = Array.from(wordForGame[0].split(''), () => 0);
 
   function checkWord(key) {
+    const hiddenPartOfBody = document.querySelectorAll('.part__body');
+
+    // letters = Array.from(wordForGame[0].split(''), () => 0);
     if (!wordForGame[0].toLowerCase().includes(key)) {
-      hiddenPartOfBody[numberOfAttempts].classList.add('human__show')
+      if (numberOfAttempts < hiddenPartOfBody.length) {
+        hiddenPartOfBody[numberOfAttempts].classList.add('human__show');
+      }
       numberOfAttempts++;
 
       changeAttempts(numberOfAttempts);
@@ -199,25 +203,23 @@ window.addEventListener('DOMContentLoaded', () => {
         letters[i] = key;
       }
     }
+
     showLetters()
 
-
     if (numberOfAttempts === 6) {
-      setTimeout(function () {
-        showModal('Game over. You lose!');
-      }, 500);
-
+      showModal('Game over. You lose!');
     }
 
     if (!letters.includes(0)) {
-      showModal('Game over. You win!')
+      showModal('Game over. You win!');
     }
   }
 
 
-  const hiddenLetters = document.querySelectorAll('.letter');
 
   function showLetters() {
+    const hiddenLetters = document.querySelectorAll('.letter');
+
     letters.forEach((item, i) => {
       if (item) {
         if (i === 0) {
@@ -237,11 +239,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   function showModal(title) {
+    window.removeEventListener('keydown', keyPress);
+
     document.body.style.overflow = 'hidden';
-
-
-
-
     const modal = createSectionWithClass('modal');
     document.body.append(modal);
 
@@ -263,7 +263,37 @@ window.addEventListener('DOMContentLoaded', () => {
     buttonNewGame.textContent = 'Play again';
 
     buttonNewGame.addEventListener('click', function () {
-      location.reload();
+      resetGame()
     });
   }
+
+  function keyPress(e) {
+    const key = e.code.slice(3).toLowerCase();
+    if (alphabet.includes(key.toLowerCase())) {
+      const keyElements = document.querySelectorAll('.keyboard__key');
+      keyElements.forEach(keyElement => {
+        if (keyElement.textContent === key.toUpperCase()) {
+          handleKeyPress(key, keyElement);
+        }
+      });
+    }
+  }
+
+  function resetGame() {
+    numberOfAttempts = 0;
+    letters = Array.from(wordForGame[0].split(''), () => 0);;
+    document.body.style.overflow = '';
+
+    wordForGame = words[Math.floor(Math.random() * (words.length))];
+    createWord();
+    createGallowsWrapper();
+    createKeyboard();
+    changeAttempts(numberOfAttempts);
+    letters = Array.from(wordForGame[0].split(''), () => 0);
+    showWord();
+    document.querySelector('.gallows-wrapper').append(createHumanWrapper());
+    document.querySelectorAll('.modal').forEach(item => item.remove())
+
+  }
+
 })

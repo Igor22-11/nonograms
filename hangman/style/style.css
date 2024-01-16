@@ -1,10 +1,10 @@
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
   padding: 20px;
-height: fit-content;
+  height: fit-content;
   position: relative;
 }
 .main {
@@ -22,6 +22,7 @@ height: fit-content;
   .main {
     flex-wrap: wrap;
     justify-content: center;
+    padding: 10px;
   }
   .game {
     min-width: 70%;
@@ -34,8 +35,8 @@ height: fit-content;
   }
 }
 .gallows {
-  min-width: 360px;
-  width: 360px;
+  max-width: 360px;
+  width: 100%;
   min-height: 600px;
   display: flex;
   justify-content: center;
@@ -97,7 +98,6 @@ height: fit-content;
   transition: 0.5s;
 }
 .head {
-
   grid-area: head;
   justify-self: center;
   align-self: end;
@@ -145,13 +145,13 @@ height: fit-content;
 
 .keyboard__key:hover {
   background: rgb(136, 136, 136);
-  box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 2px 3px 3px 0px rgba(0, 0, 0, 0.5); */
   transition: 0.5s;
 }
-.keyboard__key:active {
+/* .keyboard__key:active {
   background: rgb(161, 161, 161);
   transition: 0.3s;
-}
+} */
 
 .keyboard__key-active {
   background: rgb(136, 136, 136);
@@ -265,3 +265,4 @@ height: fit-content;
   background: rgb(161, 161, 161);
   transition: 0.3s;
 }
+
