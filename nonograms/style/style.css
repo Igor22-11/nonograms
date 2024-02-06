@@ -6,7 +6,6 @@
   --box-selected: black;
 }
 
-/* Тёмная тема */
 .dark-theme {
   --background-color: #6e6e6e;
   --text-color: white;
@@ -196,8 +195,8 @@ body {
   margin-bottom: 5px;
 }
 
-.nonogram-list-item{
-cursor: pointer;
+.nonogram-list-item {
+  cursor: pointer;
 }
 .nonogram-list-item-active {
   font-weight: bold;
@@ -209,21 +208,23 @@ cursor: pointer;
 .modal {
   width: 100vw;
   height: 100vh;
-  background: var(--background-color);
+  background: rgba(0, 0, 0, 0.8);
   position: absolute;
   left: 0;
-  top: 0;
+  top: -20px;
 }
 
 .modal__text {
+  background: var(--background-color);
   width: 250px;
   border: 1px solid var(--border-color);
   border-radius: 10px;
   margin: 0 auto;
   padding: 15px;
+  margin-top: 25px;
 }
 
-.close__modal{
+.close__modal {
   width: 70px;
 
   border: 1px solid var(--border-color);
@@ -240,8 +241,7 @@ cursor: pointer;
   transition: 0.3s;
 }
 
-
-.btns__wrapper{
+.btns__wrapper {
   display: flex;
   height: auto;
   gap: 5px;
@@ -249,7 +249,7 @@ cursor: pointer;
   justify-content: center;
 }
 
-.btn__game{
+.btn__game {
   transition: 0.3s;
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -260,4 +260,19 @@ cursor: pointer;
 .btn__game:active {
   transform: scale(0.95);
   transition: 0.3s;
+}
+
+.result__table {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 240px;
+}
+.record__title {
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
 }
