@@ -276,3 +276,31 @@ body {
   text-decoration: underline;
   text-align: center;
 }
+@media (max-width: 465px) {
+  .nonograms__box, .hint-number {
+    width: 15px;
+    height: 15px;
+    font-size: 12px;
+  }
+  .nonograms__row:nth-child(5n):not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+  }
+  .row-hints-container:nth-child(5n):not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+  }
+  
+  .nonograms__box:nth-child(5n):not(:last-child) {
+    border-right: 2px solid var(--border-color);
+    width: 17px;
+  }
+  .column-hints-container:nth-child(5n):not(:last-child) {
+    border-right: 2px solid var(--border-color);
+  }
+  
+  .row-hints-container {
+    border-right: 2px solid var(--border-color);
+  }
+  .column-hints-container {
+    border-bottom: 2px solid var(--border-color);
+  }
+}
